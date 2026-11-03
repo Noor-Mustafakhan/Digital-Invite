@@ -1,16 +1,31 @@
+import { ArchDefs } from '@/components/arch-frame'
+import { CreativeStyles } from '@/components/creative-styles'
+import { Faq } from '@/components/faq'
+import { FilmShowcase } from '@/components/film-showcase'
+import { FinalCta } from '@/components/final-cta'
+import { Footer } from '@/components/footer'
+import { Hero } from '@/components/hero'
+import { HowItWorks } from '@/components/how-it-works'
+import { Navbar } from '@/components/navbar'
+import { Pricing } from '@/components/pricing'
+import { Transformation } from '@/components/transformation'
+
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center font-sans">
-      <main className="flex w-full max-w-3xl flex-col items-center gap-8 px-6 py-16 text-center sm:items-start sm:text-left">
-        <div className="flex flex-col gap-4">
-          <h1 className="text-4xl font-bold tracking-tight">
-            Digital Invite
-          </h1>
-          <p className="max-w-md text-lg text-muted-foreground">
-            To get started, send a prompt or modify this page directly.
-          </p>
-        </div>
+    <>
+      <ArchDefs />
+      <Navbar />
+      <main className="overflow-x-clip">
+        <Hero />
+        <CreativeStyles />
+        <FilmShowcase />
+        <HowItWorks />
+        <Transformation />
+        <Pricing />
+        <Faq />
+        <FinalCta />
       </main>
-    </div>
-  );
+      <Footer />
+    </>
+  )
 }
